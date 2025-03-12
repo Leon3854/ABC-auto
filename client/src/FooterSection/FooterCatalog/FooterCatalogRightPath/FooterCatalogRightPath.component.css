@@ -1,0 +1,4 @@
+.footer-catalog-right-path {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}

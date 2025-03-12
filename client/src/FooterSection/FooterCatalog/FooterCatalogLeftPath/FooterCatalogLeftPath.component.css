@@ -1,0 +1,40 @@
+
+.MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary.Mui-selected.css-1usuzwp-MuiButtonBase-root-MuiTab-root, 
+.MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary.css-1usuzwp-MuiButtonBase-root-MuiTab-root {
+	color: var(--white-color);
+	font-weight: bold;
+}
+.MuiTabs-indicator.css-1qltlow-MuiTabs-indicator {
+	background-color: var(--red-background);
+}
+
+.MuiBox-root.css-1gsv261 {
+	border: none;
+}
+
+
+.footer-tab_panel-one {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.panel-lists {
+	margin-right: 20px;
+	padding-right: 20px;
+	padding-left: 10px;
+}
+.panel-lists:first-child {
+	margin-left: -20px;
+}
+.panel-lists_item {
+	width: 100%;
+	height: 30px;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+.panel-lists_item > * {
+	color: var(--white-color);
+	font-weight: bold;
+}

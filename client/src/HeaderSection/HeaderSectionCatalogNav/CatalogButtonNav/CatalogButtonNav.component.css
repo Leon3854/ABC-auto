@@ -1,0 +1,39 @@
+.header-main_buttons-icons {
+	/* border: 1px solid red; */
+	display: flex;
+	justify-content: end;
+}
+
+.header-button {
+	position: relative;
+	font-size: 18px;
+	color: var(--text-top-line);
+	font-weight: bold;
+	margin-right: 15px;
+	position: relative;
+	transition: all ease .5s;
+}
+.header-button:hover {
+	color: var(--red-background);
+}
+.header-icon-round {
+	left: -20px;
+	top: 18px;
+	position: absolute;
+	transform: scaleX(-1);
+}
+
+
+.header-btn-counter {
+	position: absolute;
+	right: -10px;
+	top: 14px;
+	font-size: 8px;
+	background-color: var(--red-background);
+	color: var(--white-color);
+	padding: 2px 5px;
+	border-radius: 25px;
+}
+.header-btn-counter.hide {
+	display: none;
+}

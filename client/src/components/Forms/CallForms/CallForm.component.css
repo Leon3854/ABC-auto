@@ -1,0 +1,126 @@
+
+
+.call-credit-form {
+	width: 1200px;
+	height: 160px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.credit-form-body {
+	margin: 20px 30px;
+	width: 1140px;
+	height: 100px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.get-spec-price {
+	width: 220px;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.get-spec-price_title {
+	width: 200px;
+}
+.get-spec-price_title > p {
+	color: var(--text-color);
+	font-size: 18px;
+	font-weight: bold;
+}
+.get-spec-price_for-data {
+	margin-top: 10px;
+	width: 200px;
+}
+.get-spec-price_for-data > p {
+	background-color: var(--red-background);
+	color: var(--white-color);
+	border-radius: 20px;
+	padding: 5px 10px;
+	display: inline-block;
+	font-size: 12px;
+}
+.get-spec-price_for-data > p > span {
+	font-weight: bolder;
+	color: orange;
+}
+
+.call-form-special-price {
+	width: 915px;
+	height: 100px;
+}
+
+.call-form-spec-price-body {
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.call-spec-price-name {
+	width: 30%;
+	height: 80px;
+	display: flex;
+	align-items: center;
+}
+.call-spec-price-name > input {
+	border:1px solid rgba(0, 0, 0, .2);
+	border-radius: 10px;
+	height: 60px;
+	width: 100%;
+	padding: 10px;
+	color: var(--text-top-line);
+}
+.call-spec-price-name > input::placeholder {
+	color: rgba(0, 0, 0, .2);
+}
+
+.call-spec-price-phone {
+	width: 30%;
+	height: 80px;
+	display: flex;
+	align-items: center;
+}
+.call-spec-price-phone > input {
+	border:1px solid rgba(0, 0, 0, .2);
+	border-radius: 10px;
+	height: 60px;
+	width: 100%;
+	padding: 10px;
+	color: var(--text-top-line);
+}
+.call-spec-price-phone > input::placeholder {
+	color:  rgba(0, 0, 0, .2);
+}
+
+
+.call-spec-price-submit {
+	width: 30%;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.call-spec-price-submit > button {
+	border-radius: 10px;
+	background-color: var(--red-background);
+	cursor: pointer;
+	width: 100%;
+	height: 60px;
+	color: var(--white-color);
+	text-transform: uppercase;
+}
+
+.text-offer-for-client {
+	margin-top: 10px;
+}
+.text-offer-for-client > p {
+	font-size: 10px;
+	color: var(--text-top-line);
+}

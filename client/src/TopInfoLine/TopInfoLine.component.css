@@ -1,0 +1,24 @@
+.top-info-line_section {
+  background-color: var(--gray-background);
+}
+.top-info-line {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.all-center {
+  /* border: 1px solid black; */
+  height: 24px;
+  display: flex;
+  align-items: center;
+  color: var(--text-top-line);
+}
+
+.ico-span {
+  margin-top: 6px;
+  margin-right: 3px;
+  color: var(--text-top-line);
+}

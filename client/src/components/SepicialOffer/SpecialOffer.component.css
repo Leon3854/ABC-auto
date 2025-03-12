@@ -1,0 +1,165 @@
+
+
+
+
+.special-offer-slider_wrapper {
+	width: 100%;
+	height: 300px;
+	max-width: 1200px; /* Максимальная ширина слайдера */
+	margin: 0 auto; /* Центрирование слайдера */
+	overflow: hidden; /* Скрытие переполнения */
+}
+
+.slider-title-control {
+	margin-top: 20px;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.slider-title-control_title {
+	width: 400px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 50px;
+}
+.slider-title-control_title > h4 {
+	color: var(--text-color);
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.slider-title-control_btn {
+	margin-left: 10px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+.all-controls {
+	border-radius: 6px;
+	background-color: var(--red-background);
+	color: var(--white-color);
+	font-size: 10px;
+	padding: 2px 6px;
+	margin-top: 6px;
+}
+
+.slider-title-control_control {
+	display: flex;
+	align-items: center;
+	width: 100px;
+	height: 50px;
+}
+.slider-title-controls_btns {
+	height: 40px;
+	width: 90px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.slider-title-controls_btn {
+	border-radius: 6px;
+	background-color: var(--white-color);
+	cursor: pointer;
+	height: 39px;
+	width: 39px;
+	font-size: 22px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 22, 0.2);
+	transition: all ease .5s;
+}
+
+.slider-title-controls_btn:hover {
+	background-color: var(--red-background);
+	color: var(--white-color);
+	box-shadow: none;
+}
+
+.special-offer-slider-selections_box-items {
+	height: 200px;
+	width: 100%;
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+}
+.special-offer-slider-selection_item {
+	flex: 1 0 33%; /* Каждый слайд занимает 100% ширины */
+	display: flex; /* Flexbox для размещения элементов внутри слайда */
+	justify-content: center; /* Центрирование элементов */
+	transition: transform 0.5s ease, opacity 0.5s ease; /* Плавный переход для трансформации и непрозрачности */
+}
+
+
+
+.special-offer-slider-selection_item-box {
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 200px;
+	padding: 0 10px;
+}
+
+.special-offer-slider-item_fon {
+	border-radius: 25px;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	height: 200px;
+	width: 100%;
+}
+.special-offer-slider-item_fon > img {
+	position: absolute;
+	background-size: cover;
+	background-position: left top;
+	width: 100%;
+	height: 100%;
+}
+
+.special-offer-slide-item_select-box {
+	left: 0;
+	bottom: 0px;
+	width: 70%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	color: var(--white-color);
+	padding: 0 10px;
+}
+
+.special-offer-title {
+	margin: 20px 20px;
+	font-size: 20px;
+	font-weight: bold;
+	color: var(--text-color);
+}
+.special-offer-text {
+	margin: -10px 20px;
+	color: var(--text-top-line);
+	font-size: 14px;
+	line-height: 1;
+}
+
+.special-offer-slide-item_item-btn {
+	margin-bottom: 20px;
+	margin-left: 20px;
+	width: 142px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--border-gray);
+	border-radius: 10px;
+}
+.special-offer-slide_look-select {
+	font-size: 14px;
+	color: var(--text-color);
+}

@@ -1,0 +1,153 @@
+
+.slider_wrapper {
+	width: 100%;
+	height: 440px;
+	max-width: 1200px; /* Максимальная ширина слайдера */
+	margin: 0 auto; /* Центрирование слайдера */
+	overflow: hidden; /* Скрытие переполнения */
+}
+
+.slider-title-control {
+	margin-top: 20px;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.slider-title-control_title {
+	width: 400px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 50px;
+}
+.slider-title-control_title > h4 {
+	color: var(--text-color);
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.slider-title-control_btn {
+	margin-left: 10px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+.all-controls {
+	border-radius: 6px;
+	background-color: var(--red-background);
+	color: var(--white-color);
+	font-size: 10px;
+	padding: 2px 6px;
+	margin-top: 6px;
+}
+
+.slider-title-control_control {
+	display: flex;
+	align-items: center;
+	width: 100px;
+	height: 50px;
+}
+.slider-title-controls_btns {
+	height: 40px;
+	width: 90px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.slider-title-controls_btn {
+	border-radius: 6px;
+	background-color: var(--white-color);
+	cursor: pointer;
+	height: 39px;
+	width: 39px;
+	font-size: 22px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 22, 0.2);
+	transition: all ease .5s;
+}
+
+.slider-title-controls_btn:hover {
+	background-color: var(--red-background);
+	color: var(--white-color);
+	box-shadow: none;
+}
+
+.slider-selections_box-items {
+	height: 320px;
+	width: 100%;
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+}
+.slider-selection_item {
+	flex: 1 0 30%; /* Каждый слайд занимает 100% ширины */
+	display: flex; /* Flexbox для размещения элементов внутри слайда */
+	justify-content: center; /* Центрирование элементов */
+	transition: transform 0.5s ease, opacity 0.5s ease; /* Плавный переход для трансформации и непрозрачности */
+}
+
+
+
+.slider-selection_item-box {
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 317px;
+	padding: 0 10px;
+}
+
+.slider-item_fon {
+	border-radius: 25px;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	height: 317px;
+	width: 100%;
+}
+.slider-item_fon > img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.slide-item_select-box {
+	left: 0;
+	bottom: 20px;
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	z-index: 2;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--white-color);
+	padding: 0 10px;
+}
+
+.slide-item_item-title {
+	width: 210px;
+	height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.slide-item_item-btn {
+	width: 142px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.select-item_look-select {
+	border-radius: 6px;
+	background-color: var(--red-background);
+	width: 100%;
+	height: 100%;
+	transition: all ease .5s;
+}

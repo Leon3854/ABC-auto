@@ -1,0 +1,227 @@
+/* 
+.slider-top {
+	border: 1px solid red;
+	width: 100%;
+	height: 598px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left top;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+.slider-top::after {
+	content: '';
+	position: absolute;
+	background-image: url("./slid-fon-0.png");
+	width: 785px;
+	height: 382px;
+	right: 0px;
+	bottom: 0px;
+}
+
+.slider-top_wrapper {
+	position: relative;
+}
+
+.slider-top_box {
+	position: relative;
+
+}
+
+.slider-top_box-slides {
+	position: relative;
+	width: 100wh;
+	height: 100vh;
+	z-index: 2;
+
+}
+.slider-top_slide {
+	width: 100wh;
+	height: 100vh;
+}
+.slider-top_slide-content {
+	border:1px solid orange;
+	margin: 0 5%;
+	width: 70%;
+	height: 100vh;
+}
+
+.slide-text-btn {
+	margin: 10% 10%;
+}
+.red-title-offer {
+	background-color: var(--red-background);
+	color: var(--white-color);
+	border-radius: 20px;
+	font-size: 14px;
+	display: inline-block;
+	padding: 4px 10px;
+}
+
+.main-title-slide {
+	padding: 0;
+}
+.main-title-slide > h3 {
+	padding: 0;
+	font-size: 50px;
+	font-weight: bold;
+	line-height: 1;
+}
+.offer-for-you {
+	margin-top: 0px;
+}
+.price-for-you {
+	border: none;
+	outline: none;
+	color: rgba(0, 0, 0, .5);
+	font-size: 16px;
+}
+
+.slider-top_dots-box {
+	border: 1px solid green;
+	background-color: aqua;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 999;
+	width: 150px;
+} */
+
+
+/* Slider.css */
+.slider-top_wrapper {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 598px; /* Высота слайдера */
+}
+
+.slider-top_box {
+	height: 100%;
+	position: relative;
+	background-image: url('./fon-slider.png');
+	background-position: 0 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.slider-top_box::after {
+	content: '';
+	position: absolute;
+	background-image: url("./slid-fon-0.png");
+	width: 785px;
+	height: 382px;
+	right: 0px;
+	bottom: 0px;
+}
+
+.slider-top_box-slides {
+	position: relative;
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	width: 100%;
+	height: 595px;
+	z-index: 4;
+}
+
+.slider-top_slide {
+	min-width: 100%;
+	height: 100%;
+	display: none; /* Скрываем все слайды по умолчанию */
+}
+
+.slide-content-block {
+	height: 400px;
+	width: 70%;
+	z-index: 4;
+	margin: 0 5%;
+}
+
+.slide-text-btn {
+	margin-top: 10%;
+}
+
+.red-title-offer {
+	background-color: var(--red-background);
+	color: var(--white-color);
+	border-radius: 20px;
+	font-size: 14px;
+	display: inline-block;
+	padding: 4px 10px;
+}
+
+.main-title-slide > h3 {
+	padding: 0;
+	font-size: 50px;
+	font-weight: bold;
+	line-height: 1;
+}
+.offer-for-you {
+	margin-top: 0px;
+}
+.price-for-you {
+	border: none;
+	outline: none;
+	color: rgba(0, 0, 0, .5);
+	font-size: 16px;
+}
+
+.slider-top_slide.active {
+	display: block; /* Показываем активный слайд */
+}
+
+.slider-controls {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	right: 10px;
+	display: flex;
+	justify-content: space-between;
+	transform: translateY(-50%);
+	z-index: 10;
+}
+
+.slider-control {
+	background: rgba(255, 255, 255, 0.8);
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+}
+.slider-control.prev {
+	font-size: 24px;
+	color: var(--border-gray);
+}
+
+.slider-control.next {
+	font-size: 24px;
+	color: var(--border-gray);
+}
+.slider-top_dots-box {
+	position: absolute;
+	left: 8%;
+	bottom: 10px;
+	transform: translateX(-50%);
+	display: flex;
+	z-index: 10;
+}
+
+.slider-top_nav {
+	display: flex;
+	list-style: none;
+	padding: 0;
+}
+
+.slider-top_item {
+	border: 2px solid rgba(0, 0, 0, .1);
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	background-color: var(--border-gray);
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.slider-top_item.active {
+	border: 2px solid var(--red-background);
+}

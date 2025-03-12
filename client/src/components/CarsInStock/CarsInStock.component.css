@@ -1,0 +1,312 @@
+.cars-in-stock_wrapper {
+	margin-top: 50px;
+	overflow: hidden;
+}
+
+.cars-in-stock_title {
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+}
+.cars-in-stock_title > h3 {
+	font-size: 36px;
+	font-weight: bold;
+	color: var(--text-color);
+}
+
+.cars-in-stock_body {
+	margin-top: 30px;
+}
+
+
+/* CART IN STOCK FOOTER */
+.cars-in-stock_footer {
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 70px;
+}
+
+.stock-look-more {
+	width: 312px;
+	height: 65px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--red-background);
+	color: var(--white-color);
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+/* FINISH CART IN STOCK FOOTER */
+
+.cars-in-stock_item {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.cars-in-stock_link {
+	border: 1px solid rgba(111, 111, 111, 0.2);
+	border-radius: 25px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, .25);
+	width: 426px;
+	height: 449px;
+	outline: none;
+	overflow: hidden;
+	padding: 20px;
+}
+
+.cars-in-stock_cart-header {
+	height: 60px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.cart-header_title {
+	width: 260px;
+}
+.cart-header_title > p {
+	font-size: 27px;
+	color: var(--text-color);
+}
+
+.cart-header_icons {
+	width: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	font-size: 18px;
+}
+
+
+.cars-in-stock_cart-body {
+	margin-top: 10px;
+}
+
+.cart-body_wrapper {
+	position: relative;
+	z-index: 1;
+}
+.cart-body_fon-img {
+	position: absolute;
+	z-index: 2;
+	right: -20px;
+	top: -50px;
+	z-index: -2;
+}
+
+.cart-body_offer-on-day {
+	display: flex;
+	justify-content: flex-start;
+	height: 30px;
+}
+.cart_offer-on-day {
+	width: 160px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--red-background);
+	color: var(--white-color);
+	position: relative;
+	z-index: 1;
+	font-size: 14px;
+	outline: none;
+}
+.cart_offer-on-day::after {
+	content: '';
+	position: absolute;
+	height: 0px;
+	width: 0px;
+	border-top: 25px solid transparent;
+	border-right: 26px solid var(--red-background);
+	border-radius: 6px;
+	top: 2px;
+	right: -13px;
+	transform: rotate(-45deg);
+}
+
+.cart_benefit-on-day {
+	margin-left: 30px;
+	font-size: 13px;
+	color: var(--red-background);
+	font-weight: bold;
+	height: 30px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.cart-body_car-in-stock {
+	position: relative;
+	height: 180px;
+}
+.cart-car {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+}
+
+.cart-list_car-in-stock {
+	width: 200px;
+	height: 180px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.cart-list_car-in-stock-list {
+	height: 44px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.list-icon {
+	height: 44px;
+	width: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--text-color);
+	color: var(--white-color);
+	border-radius: 50%;
+}
+
+.list-content {
+	margin-left: 10px;
+	color: var(--text-color);
+	font-size: 14px;
+}
+.list-content > p > span {
+	color: var(--red-background);
+}
+
+.cart-body_price-credit {
+	height: 26px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cart_price > p {
+	font-size: 22px;
+	color: var(--text-color);
+	font-weight: bold;
+}
+
+.cart_credit > p {
+	font-size: 16px;
+}
+.cart_credit > p > span {
+	font-weight: bold;
+}
+
+.cart-body_teh-car-list {
+	margin-top: 15px;
+}
+
+.teh-car_list {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 30px;
+}
+
+.teh-car_item {
+	border: 1px solid var(--border-gray);
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 0 10px;
+	border-radius: 15px;
+	font-size: 12px;
+}
+.teh-car_item > span {
+	margin-left: 6px;
+}
+
+.cars-in-stock_cart-footer {
+	margin-top: 10px;
+	padding-right: 25px;
+}
+.cart-footer_list {
+	height: 50px;
+	display: flex;
+	justify-content:flex-start;
+	align-items: center;
+	position: relative;
+}
+
+.cart-footer_item {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--white-color);
+	font-size: 14px;
+	font-weight: bold;
+	width: 33%;
+}
+
+.cart-footer_item.one {
+	background-color: var(--red-background);
+	position: relative;
+	border-radius: 6px 0 0 6px;
+	padding-left: 10px;
+}
+
+.cart-footer_item.two {
+	background-color: var(--text-color);
+	position: relative;
+	z-index: 1;
+}
+
+.cart-footer_item.three {
+	background-color: var(--border-gray);
+	position: relative;
+	z-index: -1;
+	padding-left: 20px;
+}
+.cart-footer_item.three::after {
+	content: '';
+	position: absolute;
+	border-top: 39px solid transparent;
+	border-right: 39px solid var(--border-gray);
+	border-radius: 6px;
+	top: 6px;
+	right: -19px;
+	transform: rotate(-45deg);
+	z-index: 1;
+}
+
+.cart-footer_item.one::after {
+	content: '';
+	position: absolute;
+	border-top: 39px solid transparent;
+	border-right: 39px solid var(--red-background);
+	border-radius: 6px;
+	top: 6px;
+	right: -19px;
+	transform: rotate(-45deg);
+	z-index: 3;
+}
+.cart-footer_item.two::after {
+	content: '';
+	position: absolute;
+	border-top: 39px solid transparent;
+	border-right: 39px solid var(--text-color);
+	border-radius: 6px;
+	top: 6px;
+	right: -19px;
+	transform: rotate(-45deg);
+	z-index: 3;
+}

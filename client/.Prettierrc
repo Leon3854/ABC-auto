@@ -1,0 +1,18 @@
+{
+	"useTabs": true,
+	"tabWidth": 2,
+	"arrowParens": "avoid",
+	"semi": true,
+	"importOrder": [
+		"<THIRD_PARTY_MODULES>",
+		"/routes/",
+		"/middleware/",
+		"^../(.*)",
+		"^./(.*)"
+	],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true
+}
+//   'trailingComma': 'none',
+//   'singleQuote': false,
+

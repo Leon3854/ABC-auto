@@ -1,0 +1,33 @@
+
+.credit-installments_main-title {
+	position: relative;
+	height: 60px;
+}
+.list-title {
+	color: var(--white-color);
+	text-transform: uppercase;
+	font-size: 16px;
+	margin-top: 10px;
+	position: relative;
+}
+.list-title::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	width: 20%;
+	height: 2px;
+	background-color: var(--red-background);
+}
+
+
+.footer-credit_item {
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.footer-credit_link {
+	color: var(--text-top-line);
+}

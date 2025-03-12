@@ -1,0 +1,33 @@
+.bread-crumbs { 
+	position: relative;
+}
+
+.bread-crumbs-nuv {
+	height: 30px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.bread-crumbs-nuv > ul {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.bread-crumbs-item {
+	margin-right: 10px;
+}
+
+.bread-crumbs-link {
+	display: flex;
+	height: 30px;
+	justify-content: flex-start;
+	align-items: center;
+	color: var(--text-top-line);
+}
+
+.bread-crumbs-link > span {
+	margin-left: 10px;
+	margin-top: 4px;
+	color: var(--red-background);
+}
