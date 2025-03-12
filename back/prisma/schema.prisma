@@ -1,0 +1,184 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  createdAt DateTime  @default(now()) @map("created_at")
+  updateAt  DateTime  @updatedAt @map("updated_at")
+  email     String    @unique
+  password  String
+  phone     String    @default("")
+  isAdmin   Boolean   @default(false) @map("is_admin")
+  Review    Review[]
+  UserCar   UserCar[]
+}
+
+model Cart {
+  id           Int      @id @default(autoincrement())
+  createdAt    DateTime @default(now()) @map("created_at")
+  updateAt     DateTime @updatedAt @map("updated_at")
+  nameModel    String
+  offer        String?
+  benefit      String?
+  benefitPrice String?
+  present      String?
+  startPrice   String?
+  startCredit  String?
+  motorPower   String?
+  gasoline     String?
+  speed        String?
+  acceleration String?
+  image        String?
+  reserve      String?
+  buy          String?
+  details      String?
+}
+
+model Car {
+  id             Int           @id @default(autoincrement())
+  createdAt      DateTime      @default(now()) @map("created_at")
+  updateAt       DateTime      @updatedAt @map("updated_at")
+  make           String?
+  model          String?
+  year           Int?
+  price          Float?
+  description    String?
+  mileage        Int?
+  color          String?
+  manufacturerId Int?
+  bodyType       BodyType
+  fuelType       FuelType
+  categoryId     Int?          @map("category_id")
+  slug           String?
+  category       Category?     @relation(fields: [categoryId], references: [id])
+  Manufacturer   Manufacturer? @relation(fields: [manufacturerId], references: [id])
+  images         Image[]
+  Review         Review[]
+  UserCar        UserCar[]
+}
+
+model Carousel {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map("created_at")
+  updateAt  DateTime @updatedAt @map("updated_at")
+  title     String   @unique
+  url       String?
+  text      String?
+}
+
+model UserCar {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map("created_at")
+  updateAt  DateTime @updatedAt @map("updated_at")
+  userId    Int
+  carId     Int
+  car       Car      @relation(fields: [carId], references: [id])
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model Category {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map("created_at")
+  updateAt  DateTime @updatedAt @map("updated_at")
+  name      String   @unique
+  slug      String   @unique
+  car       Car[]
+  image     Image[]
+}
+
+model Image {
+  id         Int       @id @default(autoincrement())
+  createdAt  DateTime  @default(now()) @map("created_at")
+  updateAt   DateTime  @updatedAt @map("updated_at")
+  carId      Int?
+  categoryId Int?
+  title      String?
+  imageId    String
+  filename   String
+  // url        String
+  car        Car?      @relation(fields: [carId], references: [id])
+  category   Category? @relation(fields: [categoryId], references: [id])
+}
+
+model Manufacturer {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  createdAt DateTime @default(now()) @map("created_at")
+  updateAt  DateTime @updatedAt @map("updated_at")
+  logotype  String?
+  url       String?
+  cars      Car[]
+}
+
+model Review {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map("created_at")
+  updateAt  DateTime @updatedAt @map("updated_at")
+  userId    Int
+  carId     Int
+  rating    Int
+  comment   String?
+  car       Car      @relation(fields: [carId], references: [id])
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model Slider {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map("created_at")
+  updateAt  DateTime @updatedAt @map("updated_at")
+  // title     String   @unique
+  // text      String
+  slides    Slide[]
+}
+
+model Slide {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map("created_at")
+  updateAt  DateTime @updatedAt @map("updated_at")
+  title     String?  @unique
+  text      String?
+  filePath  String?
+  sliderId  Int
+  slider    Slider   @relation(fields: [sliderId], references: [id])
+}
+
+model Content {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map("created_at")
+  updateAt  DateTime @updatedAt @map("updated_at")
+  key       String   @unique
+  value     String
+  icons     String?
+  url       String?
+}
+
+model ClientCall {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map("created_at")
+  updateAt  DateTime @updatedAt @map("updated_at")
+  callName  String
+  callPhone String?  @unique
+  // clientEmail String?  @unique
+}
+
+enum FuelType {
+  PETROL
+  DIESEL
+  ELECTRIC
+  HYBRID
+}
+
+enum BodyType {
+  SEDAN
+  COUPE
+  HATCHBACK
+  SUV
+  TRUCK
+  VAN
+}
